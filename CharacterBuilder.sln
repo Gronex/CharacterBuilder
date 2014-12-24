@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterBuilderTests", "Ch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterBuilder", "CharacterBuilder\CharacterBuilder.csproj", "{2002CF9F-80A2-462D-9014-3A407F727CB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterModel", "CharacterModel\CharacterModel.csproj", "{452EE2F1-7A7F-4A0B-B65B-DB7F677C24A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2002CF9F-80A2-462D-9014-3A407F727CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2002CF9F-80A2-462D-9014-3A407F727CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2002CF9F-80A2-462D-9014-3A407F727CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{452EE2F1-7A7F-4A0B-B65B-DB7F677C24A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{452EE2F1-7A7F-4A0B-B65B-DB7F677C24A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{452EE2F1-7A7F-4A0B-B65B-DB7F677C24A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{452EE2F1-7A7F-4A0B-B65B-DB7F677C24A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

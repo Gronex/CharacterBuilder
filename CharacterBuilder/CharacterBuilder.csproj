@@ -89,14 +89,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Commands\NewCharacterCommand.cs" />
+    <Compile Include="Commands\CharacterCommand.cs" />
+    <Compile Include="Commands\DiceCommand.cs" />
     <Compile Include="Design\DesignDataService.cs" />
     <Compile Include="Model\DataItem.cs" />
     <Compile Include="Model\DataService.cs" />
     <Compile Include="Model\IDataService.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="View\NewCharacterWindow.xaml.cs">
+      <DependentUpon>NewCharacterWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Page Include="MainWindow.xaml">
+    <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -104,13 +108,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Skins\MainSkin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\NewCharacterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -141,7 +149,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CharacterModel\CharacterModel.csproj">
+      <Project>{452ee2f1-7a7f-4a0b-b65b-db7f677c24a9}</Project>
+      <Name>CharacterModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DiceRoller\DiceRoller.csproj">
+      <Project>{9052b601-10dd-48dc-b335-90d8bcb0e68f}</Project>
+      <Name>DiceRoller</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
       <Visible>False</Visible>

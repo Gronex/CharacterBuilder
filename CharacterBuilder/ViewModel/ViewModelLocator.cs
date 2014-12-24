@@ -14,7 +14,7 @@ using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 using CharacterBuilder.Model;
 
-namespace CharacterBuilder.ViewModel
+namespace CharacterBuilder.View
 {
     /// <summary>
     /// This class contains static references to all the view models in the

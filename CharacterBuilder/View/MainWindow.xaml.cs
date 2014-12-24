@@ -1,7 +1,7 @@
 ﻿using System.Windows;
-using CharacterBuilder.ViewModel;
+using CharacterBuilder;
 
-namespace CharacterBuilder
+namespace CharacterBuilder.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
