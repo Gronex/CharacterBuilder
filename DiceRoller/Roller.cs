@@ -18,5 +18,23 @@ namespace DiceRoller
             }
             return result;
         }
+
+        public static int Roll(int sides)
+        {
+            var die = new Die(sides);
+            return die.Roll();
+        }
+
+        public static List<int> Roll(int numOfDice, int sides)
+        {
+            var die = new Die(sides);
+            var results = new List<int>(numOfDice);
+
+            for (int i = 0; i < numOfDice; i++)
+            {
+                results.Add(die.Roll());
+            }
+            return results;
+        }
     }
 }

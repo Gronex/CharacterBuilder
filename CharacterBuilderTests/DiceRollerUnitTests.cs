@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DiceRoller;
+using System.Collections.Generic;
 
 namespace CharacterBuilderTests
 {
@@ -12,7 +13,7 @@ namespace CharacterBuilderTests
         {
             for(int i = 0; i < 10000; i++)
             {
-                var result = Roller.AddRoll(1, 6);
+                var result = Roller.Roll(6);
                 Assert.IsTrue(result > 0 && result <= 6);
             }
         }
@@ -39,11 +40,19 @@ namespace CharacterBuilderTests
 
             for (int i = 0; i < 10000; i++)
             {
-                //Console.WriteLine(die.Roll() + "; " + die.Roll());
-                if (Roller.AddRoll(1, 6) != Roller.AddRoll(1,6)) equal = false;
+                if (Roller.Roll(1, 6) != Roller.Roll(1,6)) equal = false;
             }
 
             Assert.IsFalse(equal);
+        }
+
+        [TestMethod]
+        public void MultiDiceRollTest()
+        {
+            int diceCount = 1000;
+            IList<int> diceResults = Roller.Roll(diceCount, 6);
+
+            Assert.AreEqual<int>(diceCount, diceResults.Count);
         }
     }
 }
